@@ -1,7 +1,7 @@
 #!/bin/sh
 
 gem_name=`gem-name`
-dst_user=joel
+dst_user=sixarm
 dst_host=www.sixarm.com
 dst_path=/var/www/sixarm.com/html/git
 dst_port=22

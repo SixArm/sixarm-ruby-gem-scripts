@@ -2,7 +2,7 @@
 
 top=/home/sixarm/github
 
-for dir in /home/sixarm/github/ruby/*/*gemspec
+for dir in /home/sixarm/github/sixarm_ruby_*/*gemspec
 do
   gemdir=`dirname $dir`
   echo $gemdir
