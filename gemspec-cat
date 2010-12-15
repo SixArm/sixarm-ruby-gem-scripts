@@ -2,11 +2,11 @@
 set -o errexit
 
 ##
-# Given a gemspec stream, this returns the gem's version number.
+# Cat the current directory's gemspec file.
 #
 # Example:
-#   cat foo.gemspec | gemspec-to-gem-version
-#   => 1.2.3
+#   cat foo.gemspec | gemspec-to-gem-name-version
+#   => foo-1.2.3
 #
 # These commands are all related:
 #   gemspec-cat
@@ -17,6 +17,5 @@ set -o errexit
 #   gemspec-to-gem-version
 ##
 
-grep -m 1 ".version *= *" | sed 's/.*= *"\([^"]*\)".*/\1/'
-
+cat *.gemspec
 

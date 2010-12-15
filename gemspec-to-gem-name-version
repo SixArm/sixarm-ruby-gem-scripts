@@ -1,2 +1,21 @@
+#!/bin/sh
+set -o errexit
+
+##
+# Given a gemspec stream, this returns the gem's name-version string.
+#
+# Example:
+#   cat foo.gemspec | gemspec-to-gem-version
+#   => foo-1.2.3
+#
+# These commands are all related:
+#   gemspec-cat
+#   gemspec-to-gem-description
+#   gemspec-to-gem-name
+#   gemspec-to-gem-name-version
+#   gemspec-to-gem-summary
+#   gemspec-to-gem-version
+##
+
 grep -m 2 ".\(name\|version\) *= *" | sed 's/.*= *"\([^"]*\)".*/\1/' | tr "\n" "-" | sed 's/-$/\n/'
 

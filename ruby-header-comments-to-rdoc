@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
-#
+
+##
 # Open a ruby file and print its header comments to STDOUT.
 # This is usually suitable for making an rdoc file.
 #
@@ -41,7 +42,7 @@
 # This script is intended for creating public rdoc text,
 # so the script will stop if it sees the double-pound (##)
 # which is a Rubyism for "the rest of this comment is private"
-
+##
 
 input_ruby_filename=ARGV[0]
 File.exist?(input_ruby_filename) or raise "File #{input_ruby_filename} does not exist"
