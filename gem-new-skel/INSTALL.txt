@@ -1,32 +1,42 @@
 
-= SixArm.com Ruby Gem Install
+= SixArm.com Ruby Gem Install Notes
+
+To install this gem:
+
+  gem install {name}
 
 
-First-time users: add our gem certificate and source.
-When you do this once, it works for all our gems.
+== High Security Options
 
-  sudo wget http://sixarm.com/sixarm.pem
-  sudo gem cert --add sixarm.pem   
-  sudo gem sources --add http://sixarm.com
+To install this gem with a trust policy and high security:
 
-Install the gem with advanced options.
-
-  sudo gem install {name} --test --trust-policy HighSecurity
+  wget http://sixarm.com/sixarm.pem
+  gem cert --add sixarm.pem   
+  gem install {name} --test --trust-policy HighSecurity
 
 
-== Notes
+== What is a Trust Policy? What is High Security?
 
-Do you have any questions, comments, suggestions, or feedback?
-Let us know, we're happy to help. Our email is sixarm@sixarm.com
+A Trust Policy with High Security is how you can guarantee 
+that a gem is tamper-proof and comes from the real developers.
 
-Do you want to create your own high security gems?
-Learn how at http://www.rubygems.org/read/chapter/21
+Our developers use a digital signature to sign all our gems,
+and the gem command uses a digital certificate to verify us.
 
-To see your current gem certificate list:
+To see your gem certificate list:
 
   sudo gem cert --list
 
 Our cert looks like this:
 
-  /C=US/ST=California/L=San Francisco/O=SixArm.com/OU=SixArm.com/CN=SixArm.com/emailAddress=sixarm@sixarm.com
+  /C=US/ST=California/L=San Francisco/O=SixArm/CN=sixarm.com
+
+To learn more about the gem trust policy and high security,
+see the gem guide: http://www.rubygems.org/read/chapter/21
+
+
+== Feedback
+
+Do you have any questions, comments, suggestions, or feedback?
+Let us know, we're happy to help. Our email is sixarm@sixarm.com
 
