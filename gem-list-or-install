@@ -1,0 +1,1 @@
+gem list -i $1 || gem install $1
