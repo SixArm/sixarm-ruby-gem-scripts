@@ -20,6 +20,7 @@ mail
 mime-types
 minitest
 oauth
+open4
 polyglot
 rack
 rack-mount

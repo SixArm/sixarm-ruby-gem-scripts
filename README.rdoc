@@ -1,4 +1,4 @@
-These are Ruby gem scripts for simple gem management, inspection, etc.
+= SixArm Ruby gem scripts for simple gem management, inspection, etc.
 
 There are three kinds of tools here:
 
