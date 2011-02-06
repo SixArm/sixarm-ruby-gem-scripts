@@ -43,6 +43,7 @@ ripl-play
 ripl-profiles
 ripl-short_errors
 ripltools
+rubygems-test
 sixarm_ruby_unaccent
 sqlite3-ruby
 thor
