@@ -23,6 +23,7 @@ dash_f doc/file.README.html
 dash_d lib
 dash_d lib/$name
 dash_f lib/$name.rb
+dash_f .gemtest
 dash_f LICENSE.txt
 dash_f README.rdoc
 dash_f $name.gemspec
