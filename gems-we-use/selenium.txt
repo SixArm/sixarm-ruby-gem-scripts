@@ -1,0 +1,4 @@
+Selenium
+selenium-client
+selenium-rails
+selenium-webdriver
