@@ -1,0 +1,10 @@
+#!/bin/sh
+#
+# For each gem in the list, run the command "gem pristine".
+#
+# In some debugging cases this script is preferable to running "gem pristine --all"
+# because this script prints each gem's name before the gem's restore is attempted;
+# this can make it easier to know which gems are failing, and can also continue to
+# restore subsequent gems.
+
+gem list | awk '{print $1}' | while read gem_name; do echo "Restoring $gem_name..."; gem pristine $gem_name; done
