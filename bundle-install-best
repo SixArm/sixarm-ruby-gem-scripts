@@ -1,2 +1,1 @@
-#!/bin/sh
-bundle install --binstubs --path vendor/bundle
+RUBYOPT='-rpsych' bundle install --binstubs --path vendor/bundle
