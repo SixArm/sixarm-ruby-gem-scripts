@@ -1,2 +1,1 @@
-#!/bin/sh
-bundle install --binstubs --path vendor/bundle --without=development_osx test_osx production_osx development_rhel test_rhel production_rhel
+RUBYOPT='-rpsych' bundle install --binstubs --path vendor/bundle --without=development_osx test_osx production_osx development_rhel test_rhel production_rhel
