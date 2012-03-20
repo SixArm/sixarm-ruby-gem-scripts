@@ -1,0 +1,11 @@
+#!/bin/sh
+#
+# Add a project to rubydoc.info.
+#
+# This triggers rubydoc to download the documentation.
+#
+# Example:
+#
+#    rubydoc-add-project git://github.com/foo/bar.git
+
+curl --data-urlencode "url=$1&commit=&submit=Go" http://rubydoc.info/checkout | more 
