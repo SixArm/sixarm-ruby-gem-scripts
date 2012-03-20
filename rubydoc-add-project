@@ -2,10 +2,22 @@
 #
 # Add a project to rubydoc.info.
 #
+# We provide a git uri and 
 # This triggers rubydoc to download the documentation.
+#
+# Syntax:
+#
+#     rubydoc-add-project <git uri> [commit] 
 #
 # Example:
 #
 #    rubydoc-add-project git://github.com/foo/bar.git
+#
+# Example with a given commit:
+#
+#    rubydoc-add-project git://github.com/foo/bar.git 7e4987e2e705979dd5d80b919755a7b252d762d5
 
-curl --data-urlencode "url=$1&commit=&submit=Go" http://rubydoc.info/checkout | more 
+git_uri=$1
+commit=${2-""}
+
+curl --silent --show-error --data-urlencode "url=$git_uri&commit=$commit&submit=Go" http://rubydoc.info/checkout 
