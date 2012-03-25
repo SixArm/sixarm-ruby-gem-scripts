@@ -13,11 +13,14 @@
 #
 #    rubydoc-add-project git://github.com/foo/bar.git
 #
-# Example with a given commit:
+# Example with a given commit and scheme:
 #
 #    rubydoc-add-project git://github.com/foo/bar.git 7e4987e2e705979dd5d80b919755a7b252d762d5
+#
+#    rubydoc-add-project git://github.com/foo/bar.git 7e4987e2e705979dd5d80b919755a7b252d762d5 git
 
-git_uri=$1
+url=$1
 commit=${2-""}
+scheme=${3-"git"}
 
-curl --silent --show-error --data-urlencode "url=$git_uri&commit=$commit&submit=Go" http://rubydoc.info/checkout 
+curl --silent --show-error --data "url=$url&commit=$commit&scheme=git&submit=Go" http://rubydoc.info/checkout 
