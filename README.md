@@ -1,6 +1,7 @@
 # SixArm.com » Ruby » <br> Gem scripts for simple gem management, inspection, etc.
 
-* Docs: <http://sixarm.com/sixarm_ruby_/doc>
+* Doc: <http://sixarm.com/sixarm_ruby_/doc>
+* Gem: <http://rubygems.org/gems/sixarm_ruby_>
 * Repo: <http://github.com/sixarm/sixarm_ruby_>
 * Email: Joel Parker Henderson, <joel@sixarm.com>
 
