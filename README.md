@@ -23,8 +23,3 @@ You can customize these however you like for your own systems.
 For docs go to <http://sixarm.com/sixarm_ruby_/doc>
 
 Want to help? We're happy to get pull requests.
-
-
-## Changes
-
-* 2012-03-14 1.0.0 Update docs, tests
