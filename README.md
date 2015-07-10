@@ -3,7 +3,7 @@
 * Doc: <http://sixarm.com/sixarm_ruby_/doc>
 * Gem: <http://rubygems.org/gems/sixarm_ruby_>
 * Repo: <http://github.com/sixarm/sixarm_ruby_>
-* Email: Joel Parker Henderson, <joel@sixarm.com>
+<!--HEADER-SHUT-->
 
 
 ## Introduction
