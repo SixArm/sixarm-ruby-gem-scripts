@@ -1,0 +1,21 @@
+#!/bin/sh
+#
+# Filter "gem spec" output to one field.
+#
+# Example:
+#
+#     gem spec foo | gem-spec-filter summary
+#     => Foo does neat stuff
+#
+# ## Tracking
+#
+# Program: gem-spec-filter
+# Version: 1.0.0
+# Created: 2017-01-28
+# Updated: 2017-01-28
+# License: GPL
+# Contact: Joel Parker Henderson (joel@joelparkerhenderson.com)
+##
+set -euf
+filter="$1"
+pcregrep --multiline "^$filter: (.*)(\n .*)*" | sed -e :a -e '$!N; s/^[^[:blank:]]\+: //; s/\n[[:blank:]]\+/ /; ta' -e 'P;D'
