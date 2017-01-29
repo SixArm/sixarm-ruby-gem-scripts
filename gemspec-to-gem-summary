@@ -1,19 +1,32 @@
-#!/bin/sh
-set -o errexit
-
-##
+#/bin/sh
+#
 # Given a gemspec stream, this returns the gem's summary.
 #
 # Example:
-#   cat foo.gemspec | gemspec-to-gem-summary
-#   => "This gem does something nifty."
+#
+#     cat foo.gemspec | gemspec-to-gem-summary
+#     => "This gem does something nifty."
+#
+#
+# ## Related
 #
 # These commands are all related:
-#   gemspec-to-gem-description
-#   gemspec-to-gem-name
-#   gemspec-to-gem-name-version
-#   gemspec-to-gem-summary
-#   gemspec-to-gem-version
+#
+#   * `gemspec-cat`
+#   * `gemspec-to-gem-description`
+#   * `gemspec-to-gem-name`
+#   * `gemspec-to-gem-name-version`
+#   * `gemspec-to-gem-summary`
+#   * `gemspec-to-gem-version`
+#
+# ## Tracking
+#
+# Program: gemspec-to-gem-summary
+# Version: 2.0.0
+# Created: 2010-12-14
+# Updated: 2017-01-28
+# License: GPL
+# Contact: Joel Parker Henderson (joel@joelparkerhenderson.com)
 ##
-
-grep -m 1 ".summary *= *" | sed 's/.*= *"\([^"]*\)".*/\1/'
+set -euf
+grep -m 1 "\.summary *[:=] *" | sed 's/^.*\.summary *[:=] *"\([^"]*\)".*/\1/'

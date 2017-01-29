@@ -1,21 +1,31 @@
 #!/bin/sh
-set -o errexit
-
-##
+#
 # Cat the current directory's gemspec file.
 #
 # Example:
-#   cat foo.gemspec | gemspec-to-gem-name-version
-#   => foo-1.2.3
+#
+#     cat foo.gemspec | gemspec-to-gem-name-version
+#     => foo-1.2.3
+#
+# ## Related
 #
 # These commands are all related:
-#   gemspec-cat
-#   gemspec-to-gem-description
-#   gemspec-to-gem-name
-#   gemspec-to-gem-name-version
-#   gemspec-to-gem-summary
-#   gemspec-to-gem-version
+#
+#   * `gemspec-cat`
+#   * `gemspec-to-gem-description`
+#   * `gemspec-to-gem-name`
+#   * `gemspec-to-gem-name-version`
+#   * `gemspec-to-gem-summary`
+#   * `gemspec-to-gem-version`
+#
+# ## Tracking
+#
+# Program: gemspec-cat
+# Version: 2.0.0
+# Created: 2010-12-14
+# Updated: 2017-01-28
+# License: GPL
+# Contact: Joel Parker Henderson (joel@joelparkerhenderson.com)
 ##
-
+set -euf
 cat *.gemspec
-
