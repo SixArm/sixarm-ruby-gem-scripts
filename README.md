@@ -1,4 +1,4 @@
-SixArm.com → Ruby → <br> Gem scripts for simple gem management, inspection, etc.
+# SixArm.com → Ruby → <br> Gem scripts for simple gem management, inspection, etc.
 
 * Doc: <http://sixarm.com/sixarm_ruby_/doc>
 * Gem: <http://rubygems.org/gems/sixarm_ruby_>
