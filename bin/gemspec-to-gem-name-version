@@ -21,11 +21,14 @@
 # ## Tracking
 #
 # Program: gemspec-to-gem-name-version
-# Version: 2.0.0
+# Version: 2.0.1
 # Created: 2010-12-14
-# Updated: 2017-01-28
+# Updated: 2019-03-29
 # License: GPL
 # Contact: Joel Parker Henderson (joel@joelparkerhenderson.com)
 ##
 set -euf
-grep -m 2 "\.\(name\|version\) *[:=] *" | sed 's/^.*\.\(name\|version\) *[:=] *"\([^"]*\)".*/\2/' | tr "\n" "-" | sed 's/-$/\n/'
+grep -m 2 "\.\(name\|version\) *[:=] *" |
+sed 's/[[:space:]*"[[:space:]]*//g; s/^.*=//' |
+tr "\n" "-" |
+sed 's/-$//'
